@@ -1,2 +1,7 @@
-# 04_BattleTanks
-Open world 1 vs 1 Tank fight game, with simple AI, terrain and advanced control systems in UE4.
+# Battle Tanks
+Open World 1v1 Battle Tank game with simple AI, terrain, and controls
+
+---
+## Progress List
+* BT01 Intro, Notes & Assets.cmproj
+* BT02 Game Design Document (GDD).cmproj
