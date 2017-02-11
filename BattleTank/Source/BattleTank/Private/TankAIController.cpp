@@ -14,22 +14,22 @@ void ATankAIController::BeginPlay()
 	auto ControlledTank = GetControlledTank();
 	if (!ControlledTank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("AI not possessing a tank"));
+		//UE_LOG(LogTemp, Warning, TEXT("AI not possessing a tank"));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("AI possessing %s"), *(ControlledTank->GetName()));
+		//UE_LOG(LogTemp, Warning, TEXT("AI possessing %s"), *(ControlledTank->GetName()));
 	}
 
 	// New variable that is assigned return value from GetPlayerTank()
 	auto PlayerTank = GetPlayerTank();
 	if (!PlayerTank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("No player tank"));
+		//UE_LOG(LogTemp, Warning, TEXT("No player tank"));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("AI looking at %s"), *(PlayerTank->GetName()));
+		//UE_LOG(LogTemp, Warning, TEXT("AI looking at %s"), *(PlayerTank->GetName()));
 	}
 }
 
@@ -41,9 +41,7 @@ void ATankAIController::Tick(float DeltaTime)
 	{
 		// TODO: Move Towards the player
 		// Aim towards the player
-		//GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
-		GetControlledTank()->FindComponentByClass<UTankAimingComponent>()->AimAt(GetPlayerTank()->GetActorLocation());
-
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
 		// Fire if ready
 	}
 }
